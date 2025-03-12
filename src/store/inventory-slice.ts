@@ -8,6 +8,7 @@ export type InventoryItem = {
   id: string;
   title: string;
   price: number;
+  rating: { rate: number; count: number };
   description: string;
   category: string;
   image: string;
