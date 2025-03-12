@@ -3,9 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,7 +11,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -21,16 +21,29 @@
   margin: 0;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -38,11 +51,17 @@ p {
   text-wrap: pretty;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
@@ -58,14 +77,15 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
-.header-background, .footer-background {
+.header-background,
+.footer-background {
   background: black;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 2rem 0;
   align-items: center;
 }
 
@@ -97,4 +117,44 @@ a {
 
 li:first-child {
   font-weight: bold;
+}
+
+.index {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: black;
+}
+
+.index h1 {
+  text-align: center;
+}
+
+.about-us {
+  padding: 1rem;
+}
+
+.daily-deal {
+  color: black;
+  display: flex;
+  padding: 1rem;
+}
+
+.daily-deal img {
+  width: 200px;
+  height: auto;
+}
+
+.daily-deal-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.daily-deal-add-to-cart {
+  display: flex;
+  gap: 1rem;
+  align-self: flex-end;
 }

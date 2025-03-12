@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <div className="header-background">
       <header className="header content-container">
-        <h1>My Store</h1>
+        <h1>Everything Emporium</h1>
         <nav>
           <ul>
             <li>
