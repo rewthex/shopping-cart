@@ -1,35 +1,23 @@
 import { useEffect } from "react";
 import { fetchInventory } from "../store/inventory-slice";
+import { useAppDispatch } from "../store/hooks";
 
-import { addToCart, removeFromCart } from "../store/cart-slice";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { Outlet } from "react-router-dom";
 
 export default function Root() {
   const dispatch = useAppDispatch();
-  const inventoryItem = useAppSelector((state) => state.inventory.inventory)[0]
-  const cart = useAppSelector((state) => state.cart.items)
-  console.log(cart)
 
   useEffect(() => {
     dispatch(fetchInventory());
-  }, [dispatch])
-
-  function handleAddToCart() {
-    dispatch(addToCart(inventoryItem))
-    
-  }
-
-  function handleRemoveFromCart() {
-    dispatch(removeFromCart(inventoryItem.id))
-    
-  }
+  }, [dispatch]);
 
   return (
-    <div>
-      <button onClick={handleAddToCart}>Add to cart</button>
-      <button onClick={handleRemoveFromCart}>Remove from cart</button>
+    <div className="main-container">
+      <Header />
+      <Outlet />
+      <Footer />
     </div>
-  )
+  );
 }
-
-
