@@ -1,15 +1,18 @@
 import { useAppSelector } from "../store/hooks";
 import { DailyDeal } from "../components/DailyDeal";
-import { About } from "../components/About";
 
 export default function Index() {
-  const inventoryItem = useAppSelector((state) => state.inventory.inventory)[0];
+  const inventoryItems = useAppSelector((state) => state.inventory.inventory);
 
   return (
-    <main className="index">
-      <About />
-      
-      {inventoryItem && <DailyDeal item={inventoryItem} />}
+    <main className="content-container index"> 
+    <h1>DEALS THAT WONT LAST</h1>
+      {inventoryItems.length > 0 && <>
+        <DailyDeal item={inventoryItems[0]} />
+        <DailyDeal item={inventoryItems[1]} />
+        <DailyDeal item={inventoryItems[2]} />
+      </> 
+      }
     </main>
   );
 }
