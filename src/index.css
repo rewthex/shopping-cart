@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -9,6 +11,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --shadow-color: 0deg 0% 56%;
+  --shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.44),
+    0.9px 1.8px 2.3px -0.8px hsl(var(--shadow-color) / 0.44),
+    2.2px 4.5px 5.6px -1.7px hsl(var(--shadow-color) / 0.44),
+    5.5px 11px 13.8px -2.5px hsl(var(--shadow-color) / 0.44);
 }
 
 *,
@@ -131,6 +139,7 @@ a:hover {
 }
 
 .index {
+  min-height: 100vh;
   padding: 1rem 0;
   flex-grow: 1;
   display: flex;
@@ -156,7 +165,6 @@ a:hover {
 .daily-deal img {
   width: 160px;
   height: auto;
-  
 }
 
 .daily-deal-description {
@@ -183,8 +191,10 @@ a:hover {
 }
 
 .daily-deal-add-to-cart button {
+  width: 175px;
   background: black;
   color: white;
+  border-radius: 36px;
 }
 
 .close-cart {
@@ -197,11 +207,60 @@ a:hover {
 .cart-modal {
   position: absolute;
   right: 0;
-  width: 300px;
+  width: 500px;
   height: 100vh;
-  border-left: 3px solid black;
   background-color: white;
+  color: black;
   animation: fade-slide-in-from-right 0.3s ease-in-out;
+}
+
+.cart-modal ul {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.cart-modal img {
+  width: 50px;
+}
+
+.total-and-checkout {
+  display: flex;
+  padding: 0.8rem;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.checkout-button {
+  width: 275px;
+  align-self: center;
+  background-color: black;
+  color: white;
+  border-radius: 36px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+}
+
+.description-and-delete {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.delete-item {
+  color: red;
+  margin-right: 1rem;
+}
+
+.cart-item-price {
+  margin-left: auto;
+  align-self: flex-end;
 }
 
 .modal-backdrop {
@@ -213,6 +272,46 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5px);
   animation: fade-in 0.3s ease-in-out;
+}
+
+.card-container {
+  padding: 1rem 0;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.inventory-card {
+  display: flex;
+  padding: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  color: black;
+  box-shadow: var(--shadow-elevation-medium);
+  width: 200px;
+  height: 200px;
+}
+
+.inventory-card img {
+  align-self: center;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.inventory-card button {
+  font-size: 0.8rem;
+  align-self: center;
+  background-color: black;
+  color: white;
+  border-radius: 36px;
+}
+
+.price-and-button {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 @keyframes fade-in {

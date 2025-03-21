@@ -16,6 +16,8 @@ import ErrorPage from "./error-page";
 import Index from "./pages";
 import Shop from "./pages/shop";
 
+import 'material-icons/iconfont/material-icons.css';
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />} errorElement={<ErrorPage />}>
