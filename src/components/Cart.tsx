@@ -14,7 +14,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
   const cartTotal = cartItems.reduce(
     (acc, cur) => acc + cur.price * cur.quantity,
     0
-  );
+  ).toFixed(2);
 
   return (
     <Modal

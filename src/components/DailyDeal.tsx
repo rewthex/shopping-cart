@@ -8,6 +8,7 @@ interface DailyDealProps {
 
 export function DailyDeal({ item }: DailyDealProps) {
   const { description, title, image, price } = item;
+  const fixedPrice = price.toFixed(2)
   const discountedPrice = (price * 0.85).toFixed(2);
   const dispatch = useAppDispatch();
 
@@ -23,7 +24,7 @@ export function DailyDeal({ item }: DailyDealProps) {
           <h3>{title}</h3>
           <h5>{description}</h5>
           <div className="daily-deal-add-to-cart">
-            <p><span>${price}</span>{" "}${discountedPrice}</p>
+            <p><span>${fixedPrice}</span>{" "}${discountedPrice}</p>
             <button onClick={handleAddToCart}>Add to Cart</button>
           </div>
         </div>

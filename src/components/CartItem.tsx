@@ -9,7 +9,6 @@ export default function CartItem({
   image,
 }: CartItem) {
   const dispatch = useAppDispatch();
-
   const shortenedTitle = title.slice(0, 24) + "...";
 
   function handleDeleteItem() {
@@ -28,7 +27,9 @@ export default function CartItem({
           <input value={quantity} readOnly />
         </p>
       </div>
-      <p className="cart-item-price">${Math.round((price * quantity) * 100) / 100}</p>
+      <p className="cart-item-price">
+        ${(Math.round(price * quantity * 100) / 100).toFixed(2)}
+      </p>
     </>
   );
 }

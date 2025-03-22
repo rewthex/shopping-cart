@@ -5,7 +5,7 @@ import {
 } from "@reduxjs/toolkit";
 
 export type InventoryItem = {
-  id: string;
+  id: number;
   title: string;
   price: number;
   rating: { rate: number; count: number };

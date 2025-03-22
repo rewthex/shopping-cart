@@ -314,12 +314,33 @@ a:hover {
   justify-content: space-evenly;
 }
 
+.item-detail-modal {
+  position: absolute;
+  width: 500px;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  animation: fade-slide-in-from-left 0.3s ease-in-out;
+
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fade-slide-in-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
