@@ -19,9 +19,7 @@ export default function Header() {
 
   return (
     <>
-      {cartIsOpen && (
-        <Cart isOpen={cartIsOpen} onClose={handleCloseCartClick} />
-      )}
+      <Cart isOpen={cartIsOpen} onClose={handleCloseCartClick} />
       <div className={styles.headerContainer}>
         <header className={styles.header}>
           <span>

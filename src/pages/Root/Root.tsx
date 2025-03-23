@@ -6,10 +6,6 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { Outlet } from "react-router-dom";
 
-import Modal from 'react-modal'
-
-Modal.setAppElement("#root");
-
 export default function Root() {
   const dispatch = useAppDispatch();
 
