@@ -1,7 +1,9 @@
+import styles from './Footer.module.css'
+
 export default function Footer() {
   return (
-    <div className="footer-background">
-      <footer className="footer">
+    <div className={styles.footerBackground}>
+      <footer className={styles.footer}>
         <nav>
           <ul>
             <li>Resources</li>

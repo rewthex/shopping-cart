@@ -1,0 +1,34 @@
+.headerContainer {
+  background: #000000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header h3 {
+  text-align: end;
+  font-style: italic;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+a:hover {
+  color: rgb(187, 184, 184);
+  cursor: pointer;
+}

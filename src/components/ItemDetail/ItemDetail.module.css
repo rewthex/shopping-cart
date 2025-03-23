@@ -1,0 +1,94 @@
+.itemDetailModal {
+  width: 76vw;
+  height: 50vh;
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  margin-left: -40vw;
+  margin-top: -25vh;
+  background-color: white;
+  color: black;
+  animation: fade-slide-in-from-left 0.3s ease-in-out;
+
+}
+
+.itemDetailContainer {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1.5fr 2fr;
+  grid-template-rows: 0.5fr 0.5fr 2.5fr 1fr 1fr;
+  grid-template-areas: 'close-item item-title'
+                       'item-image .'
+                       'item-image item-description'
+                       'item-image item-rating'
+                       'item-image item-purchase';
+}
+
+.closeItem {
+  grid-area: close-item;
+  width: 50px;
+  background-color: white;
+  border: none;
+  padding: 0;
+}
+
+
+.itemImage {
+  grid-area: item-image;
+  align-self: center;
+  justify-self: center;
+}
+
+.itemImage {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.itemTitle {
+  grid-area: item-title;
+  font-size: 1.5rem;
+  font-style: oblique;
+  align-self: center;
+}
+
+.itemDescription {
+  grid-area: item-description;
+  padding: 1rem;
+  line-height: 1.8;
+}
+
+.itemRating {
+  grid-area: item-rating;
+  justify-self: end;
+}
+
+.itemPurchase {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  grid-area: item-purchase;
+  justify-self: end;
+}
+
+.itemPurchase span {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.itemPurchase button {
+  margin-left: 30px;
+  width: 150px;
+  height: 40px;
+  background-color: black;
+  color: white;
+}
+
+.itemPurchase input {
+  height: 40px;
+  width: 30px;
+  text-align: center;
+}

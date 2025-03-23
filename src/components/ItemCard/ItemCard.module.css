@@ -1,0 +1,4 @@
+.priceAndButton {
+  display: flex;
+  justify-content: space-evenly;
+}

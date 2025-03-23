@@ -1,0 +1,23 @@
+.footerBackground {
+  background: black;
+}
+
+.footer {
+  padding: 2rem 1rem;
+}
+
+.footer nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0;
+}
+
+.footer li:first-child {
+  font-weight: bold;
+}

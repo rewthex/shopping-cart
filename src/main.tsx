@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
+import "./main.css";
 import {
   createRoutesFromElements,
   createBrowserRouter,
@@ -11,18 +11,16 @@ import {
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 
-import Root from "./pages/root";
-import ErrorPage from "./error-page";
-import Index from "./pages";
-import Shop from "./pages/shop";
-
-import 'material-icons/iconfont/material-icons.css';
+import Root from "./pages/Root/Root";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
+import Home from "./pages/Home/Home";
+import Shop from "./pages/Shop/Shop";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />} errorElement={<ErrorPage />}>
       <Route errorElement={<ErrorPage />} />
-      <Route index element={<Index />} />
+      <Route index element={<Home />} />
       <Route path="shop" element={<Shop />} />
     </Route>
   )

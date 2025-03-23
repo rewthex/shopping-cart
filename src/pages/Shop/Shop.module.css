@@ -1,0 +1,36 @@
+.cardContainer {
+  padding: 1rem 0;
+  min-height: 100vh;
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.inventoryCard {
+  display: flex;
+  padding: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  color: black;
+  box-shadow: var(--shadow-elevation-medium);
+  width: 200px;
+  height: 200px;
+}
+
+.inventoryCard img {
+  align-self: center;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.inventoryCard button {
+  font-size: 0.8rem;
+  align-self: center;
+  background-color: black;
+  color: white;
+  border-radius: 36px;
+}

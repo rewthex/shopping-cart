@@ -2,7 +2,7 @@ import { type PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { InventoryItem } from "./inventory-slice";
 
 export type CartItem = {
-  id: string;
+  id: number;
   title: string;
   price: number;
   quantity: number;
@@ -24,20 +24,26 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addToCart(state, action: PayloadAction<InventoryItem>) {
+    addToCart(
+      state,
+      action: PayloadAction<{ item: InventoryItem; quantity: number }>
+    ) {
       const itemIndex = state.items.findIndex(
-        (item) => item.id === action.payload.id
+        (item) => item.id === action.payload.item.id
       );
 
       if (itemIndex >= 0) {
-        state.items[itemIndex].quantity++;
+        state.items[itemIndex].quantity += action.payload.quantity;
       } else {
-        state.items.push({ ...action.payload, quantity: 1 });
+        state.items.push({
+          ...action.payload.item,
+          quantity: action.payload.quantity,
+        });
       }
     },
     removeFromCart(state, action: PayloadAction<string>) {
       const itemIndex = state.items.findIndex(
-        (item) => item.id === action.payload
+        (item) => item.id === parseInt(action.payload)
       );
       state.items.splice(itemIndex, 1);
     },

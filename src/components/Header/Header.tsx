@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { useAppSelector } from "../store/hooks";
+import { useAppSelector } from "../../store/hooks";
 import { useState } from "react";
-import Cart from "./Cart";
+import Cart from "../Cart/Cart";
+import styles from "./Header.module.css";
 
 export default function Header() {
   const [cartIsOpen, setCartIsOpen] = useState(false);
@@ -9,7 +10,7 @@ export default function Header() {
   const totalQuantity = cartItems.reduce((val, item) => val + item.quantity, 0);
 
   function handleOpenCartClick() {
-    setCartIsOpen(true);
+    if (!cartIsOpen) setCartIsOpen(true);
   }
 
   function handleCloseCartClick() {
@@ -18,9 +19,11 @@ export default function Header() {
 
   return (
     <>
-      <Cart isOpen={cartIsOpen} onClose={handleCloseCartClick} />
-      <div className="header-background">
-        <header className="header content-container">
+      {cartIsOpen && (
+        <Cart isOpen={cartIsOpen} onClose={handleCloseCartClick} />
+      )}
+      <div className={styles.headerContainer}>
+        <header className={styles.header}>
           <span>
             <h1>Everything Emporium</h1>
             <h3>Where everything has to go!</h3>

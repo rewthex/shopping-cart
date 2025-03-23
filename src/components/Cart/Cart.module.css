@@ -1,0 +1,50 @@
+.closeCart {
+  background-color: white;
+  border: none;
+  font-size: 2rem;
+  padding-left: 0.8rem;
+}
+
+.cartModal {
+  position: absolute;
+  right: 0;
+  width: 500px;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  animation: fade-slide-in-from-right 0.5s ease-in-out;
+}
+
+.cartModal ul {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.cartModal img {
+  width: 50px;
+}
+
+.totalAndCheckout {
+  display: flex;
+  padding: 0.8rem;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.checkoutButton {
+  width: 275px;
+  align-self: center;
+  background-color: black;
+  color: white;
+  border-radius: 36px;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+}
+

@@ -1,0 +1,40 @@
+.dailyDeal {
+  color: black;
+  display: flex;
+  padding: 1rem;
+}
+
+.dailyDeal img {
+  width: 160px;
+  height: auto;
+}
+
+.dailyDealDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.dailyDealAddToCart {
+  display: flex;
+  gap: 2rem;
+  align-self: flex-end;
+}
+
+.dailyDealAddToCart p {
+  align-self: flex-end;
+}
+
+.dailyDealAddToCart span {
+  padding-right: 0.5em;
+  text-decoration: line-through;
+  color: red;
+}
+
+.dailyDealAddToCart button {
+  width: 175px;
+  background: black;
+  color: white;
+  border-radius: 36px;
+}

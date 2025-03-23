@@ -1,0 +1,16 @@
+.trashAndQuantity {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.trashAndQuantity input {
+  width: 30px;
+  text-align: center;
+}
+
+.cartItemPrice {
+  margin-left: auto;
+  align-self: flex-end;
+}
